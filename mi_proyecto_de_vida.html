@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mi proyecto de vida: sueños, metas y planes para el futuro.">
+  <title>Mi Proyecto de Vida</title>
+  <style>
+    :root {
+      --pink: #e9a7c8;
+      --pink-dark: #b85b91;
+      --purple: #8b78c8;
+      --lavender: #eee9fb;
+      --ink: #342b46;
+      --muted: #6f667d;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(135deg, #fff6fb, #f5f1ff);
+      line-height: 1.65;
+    }
+    header {
+      min-height: 88vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 3rem 1.25rem;
+      background:
+        radial-gradient(circle at 15% 20%, #f7d9e9 0 9%, transparent 10%),
+        radial-gradient(circle at 85% 75%, #ddd4fa 0 12%, transparent 13%),
+        linear-gradient(135deg, #f9ddeb, #e8e1fb);
+    }
+    .hero {
+      max-width: 850px;
+      padding: 2.5rem 2rem;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 28px;
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 18px 55px rgba(92, 65, 117, .12);
+    }
+    .eyebrow {
+      color: var(--pink-dark);
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-size: .78rem;
+    }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.05; margin: .7rem 0 1rem; }
+    h1 span { color: var(--purple); }
+    .hero p { color: var(--muted); font-size: 1.15rem; max-width: 620px; margin: 0 auto 1.5rem; }
+    nav {
+      position: sticky; top: 0; z-index: 5;
+      display: flex; justify-content: center; flex-wrap: wrap; gap: .4rem;
+      padding: .8rem 1rem; background: rgba(255,255,255,.94);
+      border-bottom: 1px solid #eee5f4; backdrop-filter: blur(10px);
+    }
+    nav a {
+      text-decoration: none; color: var(--ink); font-weight: 650;
+      padding: .45rem .8rem; border-radius: 999px; font-size: .92rem;
+    }
+    nav a:hover { background: var(--lavender); color: var(--purple); }
+    main { width: min(1080px, 92%); margin: 3rem auto; }
+    section { margin: 0 0 2rem; scroll-margin-top: 90px; }
+    .section-title { text-align: center; margin-bottom: 1.4rem; }
+    .section-title h2 { font-size: clamp(1.7rem, 4vw, 2.35rem); margin: 0; }
+    .section-title p { color: var(--muted); margin: .35rem 0 0; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .card {
+      background: var(--white); padding: 1.5rem; border-radius: 20px;
+      border: 1px solid #eee7f4; box-shadow: 0 8px 24px rgba(68, 48, 90, .06);
+    }
+    .card h3 { margin: 0 0 .45rem; color: var(--pink-dark); }
+    .card p { margin: 0; color: var(--muted); }
+    .wide { grid-column: 1 / -1; }
+    .quote {
+      text-align: center; padding: 2.2rem 1.5rem; border-radius: 24px;
+      color: #fff; background: linear-gradient(120deg, var(--pink-dark), var(--purple));
+      font-size: clamp(1.15rem, 3vw, 1.55rem); font-weight: 650;
+    }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .step {
+      background: #fff; border-radius: 18px; padding: 1.25rem;
+      border-top: 5px solid var(--pink); box-shadow: 0 8px 24px rgba(68,48,90,.06);
+    }
+    .step:nth-child(2) { border-color: var(--purple); }
+    .step:nth-child(3) { border-color: #c8a4df; }
+    .step strong { display: block; margin-bottom: .35rem; }
+    footer { text-align: center; padding: 2rem 1rem; color: var(--muted); }
+    .edit-note { font-size: .88rem; color: #7b6d8d; text-align: center; margin-top: 1.2rem; }
+    @media (max-width: 680px) {
+      .grid, .steps { grid-template-columns: 1fr; }
+      .wide { grid-column: auto; }
+      nav { gap: .1rem; }
+      nav a { font-size: .82rem; padding: .4rem .55rem; }
+      .hero { padding: 2rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header id="inicio">
+    <div class="hero">
+      <div class="eyebrow">Mis sueños · Mis decisiones · Mi futuro</div>
+      <h1>Mi Proyecto<br><span>de Vida</span></h1>
+      <p>Un camino para conocerme, descubrir lo que quiero lograr y trabajar con ilusión por el futuro que deseo construir.</p>
+      <p><strong>Presentado por:</strong> [Escribe aquí tu nombre]</p>
+    </div>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <a href="#quien-soy">Quién soy</a>
+    <a href="#mision">Misión y visión</a>
+    <a href="#valores">Mis valores</a>
+    <a href="#metas">Mis metas</a>
+    <a href="#plan">Mi plan</a>
+  </nav>
+
+  <main>
+    <section id="quien-soy">
+      <div class="section-title">
+        <h2>¿Quién soy?</h2>
+        <p>El comienzo de todo proyecto es conocerme a mí mismo/a.</p>
+      </div>
+      <div class="grid">
+        <article class="card wide">
+          <h3>Mi historia</h3>
+          <p>Soy una persona con cualidades, ideas y sueños por cumplir. Cada experiencia me ayuda a aprender, crecer y descubrir en qué puedo mejorar. Estoy construyendo mi propio camino, a mi ritmo y con confianza en mis capacidades.</p>
+        </article>
+        <article class="card">
+          <h3>Mis fortalezas</h3>
+          <p>Me esfuerzo por aprender, puedo ser responsable, tengo sueños y cuento con la capacidad de superar retos con paciencia y dedicación.</p>
+        </article>
+        <article class="card">
+          <h3>Lo que quiero mejorar</h3>
+          <p>Quiero organizar mejor mi tiempo, confiar más en mis ideas, aprender cosas nuevas y ser constante con mis compromisos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="mision">
+      <div class="section-title">
+        <h2>Mi misión y mi visión</h2>
+        <p>Lo que guía mis decisiones hoy y lo que imagino para mañana.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Mi misión</h3>
+          <p>Dar lo mejor de mí cada día, estudiar, aprender de mis experiencias, tratar a los demás con respeto y tomar decisiones que me acerquen a mis sueños.</p>
+        </article>
+        <article class="card">
+          <h3>Mi visión</h3>
+          <p>En el futuro quiero ser una persona preparada, independiente, feliz y orgullosa de sus esfuerzos, con la oportunidad de desarrollar mis talentos y aportar algo bueno a los demás.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="valores">
+      <div class="section-title">
+        <h2>Los valores que me representan</h2>
+        <p>Son la base de la persona que quiero llegar a ser.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Respeto</h3><p>Valorar a las personas, sus ideas y sus diferencias.</p></article>
+        <article class="card"><h3>Responsabilidad</h3><p>Cumplir mis compromisos y aceptar mis decisiones.</p></article>
+        <article class="card"><h3>Honestidad</h3><p>Actuar con sinceridad y ser fiel a mis principios.</p></article>
+        <article class="card"><h3>Perseverancia</h3><p>Seguir aprendiendo y esforzándome aunque algo sea difícil.</p></article>
+      </div>
+    </section>
+
+    <section id="metas">
+      <div class="section-title">
+        <h2>Mis metas y sueños</h2>
+        <p>Los grandes logros comienzan con pequeños pasos.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>🌷 A corto plazo</h3>
+          <p>Mejorar mi rendimiento académico, entregar mis trabajos a tiempo, organizar mis actividades y aprender algo nuevo.</p>
+        </article>
+        <article class="card">
+          <h3>💜 A mediano plazo</h3>
+          <p>Terminar mis estudios escolares, descubrir qué carrera o profesión me interesa y fortalecer mis habilidades.</p>
+        </article>
+        <article class="card wide">
+          <h3>✨ A largo plazo</h3>
+          <p>Continuar mi formación, ejercer una profesión que me guste, alcanzar independencia, apoyar a las personas importantes para mí y construir una vida con propósito.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="plan">
+      <div class="section-title">
+        <h2>Mi plan de acción</h2>
+        <p>Mis sueños necesitan pasos concretos para hacerse realidad.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><strong>1. Hoy</strong>Organizar mis horarios, estudiar con constancia y reconocer mis avances.</div>
+        <div class="step"><strong>2. Durante mis estudios</strong>Investigar opciones de formación, pedir orientación y desarrollar mis talentos.</div>
+        <div class="step"><strong>3. En el futuro</strong>Seguir preparándome, aprovechar oportunidades y ajustar mis metas cuando sea necesario.</div>
+      </div>
+    </section>
+
+    <div class="quote">“Mi futuro se construye con las decisiones y los esfuerzos que hago cada día”.</div>
+    <p class="edit-note">Este proyecto es personal: puedes cambiar los textos para que reflejen tus propios gustos, experiencias y sueños.</p>
+  </main>
+
+  <footer>Mi Proyecto de Vida · Un paso a la vez 💗</footer>
+</body>
+</html>
